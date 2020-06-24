@@ -1,5 +1,5 @@
 # terraform-aws-rds-cluster-plan
-terraform plan using terraform-aws-rds-cluster &amp; terraform-aws-rds-cluster-parameter-group-modules
+terraform 12 plan
 
 ## Usage
 * Clone this repo to set up an aurora serverless rds cluster! [terraform-aws-rds-cluster-plan](https://github.com/pgreene/terraform-aws-rds-cluster-plan)
