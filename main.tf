@@ -2,9 +2,9 @@ module "aws_sg_db" {
   source = "git::https://github.com/pgreene/terraform-aws-security-group"
   //source  = "app.terraform.io/space/security-group/aws"
   //version = "1.0.0"
-  name = join("-",[module.label.id,"dsg"])
-  vpc_id = local.vpc_id
-  tags = module.label.tags
+  name = "your-security-group-name"
+  vpc_id = "vpc-id"
+  //tags = 
 }
 
 module "aws_sg_rule_db3306_ingress" {
