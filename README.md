@@ -20,4 +20,5 @@ terraform apply
 * [terraform-aws-rds-cluster](https://github.com/pgreene/terraform-aws-rds-cluster)
 * [terraform-aws-security-group](https://github.com/pgreene/terraform-aws-security-group)
 * [terraform-aws-security-group-rule](https://github.com/pgreene/terraform-aws-security-group-rule)
+* [terraform-aws-db-subnet-group](https://github.com/pgreene/terraform-aws-db-subnet-group)
 * [terraform-aws-rds-cluster-parameter-group](https://github.com/pgreene/terraform-aws-rds-cluster-parameter-group)
