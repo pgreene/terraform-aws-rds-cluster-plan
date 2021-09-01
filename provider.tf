@@ -7,6 +7,6 @@ provider "aws" {
 //OR
 
 provider "aws" {
-  profile = "local-aws-profilee"
-  region     = "eu-west-1"
+  profile = "local-aws-profile"
+  region = "eu-west-1"
 }
