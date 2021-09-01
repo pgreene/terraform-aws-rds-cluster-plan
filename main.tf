@@ -4,7 +4,7 @@ module "aws_sg_db" {
   //version = "1.0.0"
   name = "your-security-group-name"
   vpc_id = "vpc-id"
-  //tags = 
+  tags = merge(local.tags,tomap({Name = "your-security-group-name"})) 
 }
 
 module "aws_sg_rule_db3306_ingress" {
@@ -38,7 +38,7 @@ module "aws_db_subnet_group" {
   name = "your-subnet-group-name"
   //subnet_ids = ["subnet-123456","subnet-123456","subnet-123456"]
   subnet_ids = local.private_subnets
-  //tags = 
+  tags = merge(local.tags,tomap({Name = "your-subnet-group-name"}))  
 }
 
 module "aws_rds_cluster_parameter_group" {
@@ -50,7 +50,7 @@ module "aws_rds_cluster_parameter_group" {
   slow_query_log = "1"
   log_queries_not_using_indexes = "1"
   wait_timeout = "300"
-  //tags = 
+  tags = merge(local.tags,tomap({Name = "your-parameter-group-name"})) 
 }
 
 module "aws_rds_cluster_aurora_serverless" {
@@ -77,5 +77,5 @@ module "aws_rds_cluster_aurora_serverless" {
   //scaling_configuration_timeout_action = "ForceApplyCapacityChange" 
   skip_final_snapshot = false
   final_snapshot_identifier = join("-",[module.label.id,"delete"])
-  //tags = 
+  tags = merge(local.tags,tomap({Name = "your-database-cluster-name"})) 
 }
